@@ -1,0 +1,141 @@
+.form-container {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+.form-toggle button.active {
+    background: #F09342;
+    color: white;
+}
+
+.form-content {
+    position: relative;
+    width: 200%;
+    display: flex;
+    transition: transform 0.5s ease;
+    z-index: 1; /* Ensure it is above the video background */
+}
+
+form {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #F09342;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #6e3b0f;
+}
+
+body {
+    background-image: url('./mylivewallpapers-com-Winter-Dragon-Warrior-4K.mp4');
+    background-size: cover;
+    margin-bottom: 100px; /* Adjust as needed */
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1; /* Keep video in the background */
+    transform: translate(-50%, -50%);
+}
+
+.fontt {
+    font-family: "Meow Script", serif;  
+    font-weight: bolder; 
+    font-style: normal; 
+    color: #240101; 
+    font-size: 6rem; /* Increase font size for larger screens */
+    display: flex; 
+    justify-content: center; 
+}
+
+.chichi {
+     font-family:"Meow Script", serif;  
+     font-size :2rem; 
+     display:flex; 
+     justify-content:center; 
+     color:#240101; 
+     margin-right :100px; /* Adjust as needed */
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    
+   .form-container {
+       width :90%; /* Use more of the screen width on mobile */
+       margin :20px auto; /* Center with some margin */
+   }
+
+   .form-content {
+       width :200%; /* Keep this to allow sliding between forms */
+   }
+
+   form {
+       width :100%; /* Full-width forms on mobile */
+   }
+
+   input, button {
+       width :100%; /* Full-width inputs and buttons on mobile */
+   }
+
+   .fontt{
+       font-size :3rem; /* Adjust font size for mobile readability */
+       text-align :center; /* Center align text */
+   }
+
+   .chichi{
+       font-size :1.5rem; /* Smaller footer text on mobile */
+       margin-right :0; /* Remove right margin for better fit */
+   }
+}
