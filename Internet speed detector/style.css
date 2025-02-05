@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(300deg, #C9E6F0, #A294F9, #CDC1FF);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 2px solid black;
+    height: 50vh;
+    width: 50vw;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+#loaderbutton {
+    box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.3), 0 8px 30px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    height: 5vh;
+    width: 10vw;
+}
+
+#loading {
+    border: 5px solid white;
+    border-top: 5px solid black;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        height: 70vh;
+        width: 90vw;
+    }
+
+    #loaderbutton {
+        height: 7vh;
+        width: 30vw;
+    }
+
+    #loading {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.hidden{
+    display: none;
+}
+.speed-info{
+    font-weight: bold;
+    color: white;
+    
+}
+h1{ 
+    
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin-bottom:75px ;
+  font-size: 5em; /* Adjust size as needed */
+    background-image: linear-gradient(to right, #23486A, #801349); /* White to Pink gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; 
+}
+h4{
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: ;
+}
